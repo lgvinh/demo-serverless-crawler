@@ -1,9 +1,7 @@
-module.exports.handler = async () => {
-  const response = {
-    statusCode: 200,
-    body: JSON.stringify({
-      message: "Get products success"
-    })
-  };
-  return response;
-};
+const {
+  ElasticsearchServiceClient,
+} = require("@aws-sdk/client-elasticsearch-service");
+
+const client = new ElasticsearchServiceClient();
+
+module.exports.handler = async () => {};
