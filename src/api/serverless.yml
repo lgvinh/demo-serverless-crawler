@@ -1,0 +1,22 @@
+service: poc-crawler-api
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  region: ap-southeast-1
+
+functions:
+  getProducts:
+    handler: ./src/get.handler
+    events:
+      - http:
+          path: /products
+          method: get
+          cors: true
+  createProduct:
+    handler: ./src/create.handler
+    events:
+      - http:
+          path: /products
+          method: post
+          cors: true
