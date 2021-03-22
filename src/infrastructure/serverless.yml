@@ -10,6 +10,7 @@ custom:
 
 resources:
   Resources:
+    # Elastic Search Domain
     productManagementESDomain:
       Type: "AWS::Elasticsearch::Domain"
       Properties:
@@ -24,3 +25,21 @@ resources:
           EBSEnabled: true
           VolumeSize: 10
           VolumeType: gp2
+        AccessPolicies:
+          Statement:
+            - Effect: Allow
+              Principal:
+                AWS: "*"
+              Action: "es:*"
+              Resource: "*"
+
+  Outputs:
+    # Elastic Search
+    ProductManagementElasticSearchDomainEndpoint:
+      Description: "Product Management ElasticSearch Domain Endpoint"
+      Value:
+        Fn::GetAtt: [productManagementESDomain, DomainEndpoint]
+    ProductManagementDataElasticSearchDomainARN:
+      Description: "Product Management ElasticSearch Domain ARN"
+      Value:
+        Fn::GetAtt: [productManagementESDomain, DomainArn]

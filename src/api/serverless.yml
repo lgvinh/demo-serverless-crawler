@@ -4,17 +4,22 @@ provider:
   name: aws
   runtime: nodejs12.x
   region: ap-southeast-1
+  infrastructure: ${file(../infrastructure/export.yml)}
+  environment:
+    ES_END_POINT: ${self:provider.infrastructure.esEndPoint}
+    ES_DOMAIN_NAME: ${self:provider.infrastructure.esDomainName}
+    REGION: "ap-southeast-1"
 
 functions:
   getProducts:
-    handler: ./src/list.handler
+    handler: ./src/controllers/list.handler
     events:
       - http:
           path: /products
           method: get
           cors: true
   createProduct:
-    handler: ./src/create.handler
+    handler: ./src/controllers/create.handler
     events:
       - http:
           path: /products

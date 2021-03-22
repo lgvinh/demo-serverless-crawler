@@ -1,0 +1,2 @@
+esEndPoint: ${cf:poc-crawler-infrastructure-dev.ProductManagementElasticSearchDomainEndpoint}
+esDomainName: ${cf:poc-crawler-infrastructure-dev.ProductManagementDataElasticSearchDomainARN}

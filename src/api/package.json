@@ -12,5 +12,9 @@
   "devDependencies": {
     "@aws-sdk/client-elasticsearch-service": "^3.9.0",
     "aws-sdk": "^2.867.0"
+  },
+  "dependencies": {
+    "elasticsearch": "^16.7.2",
+    "http-aws-es": "^6.0.0"
   }
 }
