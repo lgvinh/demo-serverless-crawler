@@ -1,5 +1,8 @@
 service: poc-crawler-api
 
+plugins:
+  - serverless-offline
+
 provider:
   name: aws
   runtime: nodejs12.x
@@ -15,7 +18,7 @@ functions:
     handler: ./src/controllers/list.handler
     events:
       - http:
-          path: /products
+          path: /products/search
           method: get
           cors: true
   createProduct:
