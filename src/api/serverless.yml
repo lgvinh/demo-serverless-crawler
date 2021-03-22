@@ -7,7 +7,7 @@ provider:
 
 functions:
   getProducts:
-    handler: ./src/get.handler
+    handler: ./src/list.handler
     events:
       - http:
           path: /products
