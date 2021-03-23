@@ -1,0 +1,15 @@
+service: poc-crawler
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  region: ap-southeast-1
+  infrastructure: ${file(../infrastructure/export.yml)}
+  environment:
+    API_URL: "https://bj3au82jbk.execute-api.ap-southeast-1.amazonaws.com/dev"
+
+functions:
+  crawData:
+    handler: ./src/craw.handler
+    environment:
+      TEST: true

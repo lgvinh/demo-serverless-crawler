@@ -4,9 +4,6 @@ const awsHttpClient = require("http-aws-es");
 
 const { ES_END_POINT, REGION } = process.env;
 
-/**
- * @typedef {import("elasticsearch").SearchParams} SearchParams
- */
 class ElasticSearchRepository {
   constructor(
     config = {
@@ -23,16 +20,20 @@ class ElasticSearchRepository {
 
   search(options = {}) {
     return this.client.search(options);
-  };
+  }
 
   create(options = {}) {
     return this.client.create(options);
   }
-};
+
+  bulk(options = {}) {
+    return this.client.bulk(options);
+  }
+}
 
 const elasticSearchClient = (config) => new ElasticSearchRepository(config);
 
 module.exports = {
   ElasticSearchRepository,
-  elasticSearchClient
-}
+  elasticSearchClient,
+};

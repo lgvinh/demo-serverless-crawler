@@ -7,6 +7,8 @@ provider:
 
 custom:
   esDomainName: product-search
+  region: ap-southeast-1
+  stage: dev
 
 resources:
   Resources:

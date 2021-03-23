@@ -1,9 +1,12 @@
 class ProductDTO {
-  /**
-   * 
-   */
-  constructor(product) {
-    this.product = product;
+  constructor({ _index, _type, _id, _score, name, description, price }) {
+    this._index = _index;
+    this._type = _type;
+    this._id = _id;
+    this._score = _score;
+    this.name = name;
+    this.description = description;
+    this.price = price;
   }
 
   /**
@@ -16,11 +19,19 @@ class ProductDTO {
    *  description: string
    *  price: number
    * }} Product
-   * 
+   *
    * @returns {Product}
    */
   getRawProduct() {
-    return this.product;
+    return {
+      _index: this._index,
+      _type: this._type,
+      _id: this._id,
+      _score: this._score,
+      name: this.name,
+      description: this.description,
+      price: this.price,
+    };
   }
 }
 
@@ -28,5 +39,5 @@ const productDTO = (product) => new ProductDTO(product);
 
 module.exports = {
   ProductDTO,
-  productDTO
-}
+  productDTO,
+};

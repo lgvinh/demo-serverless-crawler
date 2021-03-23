@@ -1,15 +1,21 @@
 const { elasticSearchClient } = require("../data-access-layer/repository");
-const { INDICES } = require('../config/constant');
-const uuid = require('uuid');
+const { INDICES } = require("../config/constant");
 
 module.exports.handler = async (event) => {
-  const product = JSON.parse(event.body);
+  const products = JSON.parse(event.body);
   const client = elasticSearchClient();
+  const bulkSet = products.flatMap((doc) => [
+    {
+      index: {
+        _index: INDICES.PRODUCT,
+      },
+    },
+    doc,
+  ]);
+  console.log("bulkSet :>> ", bulkSet);
   try {
-    const result = await client.create({
-      id: uuid.v4(),
-      index: INDICES.PRODUCT,
-      body: product
+    const result = await client.bulk({
+      body: bulkSet,
     });
 
     return {
@@ -19,7 +25,7 @@ module.exports.handler = async (event) => {
   } catch (error) {
     return {
       statusCode: error.status,
-      body: JSON.stringify(error.body)
-    }
+      body: JSON.stringify(error.body),
+    };
   }
 };
