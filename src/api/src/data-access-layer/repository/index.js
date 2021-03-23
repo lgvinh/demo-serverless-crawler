@@ -30,7 +30,7 @@ class ElasticSearchRepository {
   }
 };
 
-const elasticSearchClient = new ElasticSearchRepository();
+const elasticSearchClient = (config) => new ElasticSearchRepository(config);
 
 module.exports = {
   ElasticSearchRepository,

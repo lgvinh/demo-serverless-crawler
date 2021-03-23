@@ -3,10 +3,10 @@ const { INDICES } = require('../config/constant');
 const uuid = require('uuid');
 
 module.exports.handler = async (event) => {
+  const product = JSON.parse(event.body);
+  const client = elasticSearchClient();
   try {
-    const product = JSON.parse(event.body);
-
-    const result = await elasticSearchClient.create({
+    const result = await client.create({
       id: uuid.v4(),
       index: INDICES.PRODUCT,
       body: product
