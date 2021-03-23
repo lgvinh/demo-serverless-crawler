@@ -1,4 +1,5 @@
 const ElasticSearchRepository = require("../data-access-layer/repository");
+const { productDTO } = require('../data-access-layer/dto/product');
 
 const client = new ElasticSearchRepository();
 
@@ -27,16 +28,18 @@ module.exports.handler = async (event) => {
     } = await client.search({
       index: "products",
       body: requestBody
-    })
+    });
+
+    const products = productDTO(data).getRawProducts();
 
     return {
       statusCode: 200,
       body: JSON.stringify({
-        data: data.map(product =>  product._source ),
+        data: products,
         total
       })
     };
-    
+
   } catch (error) {
     console.log('Error: ', error);
   }

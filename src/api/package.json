@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "elasticsearch": "^16.7.2",
-    "http-aws-es": "^6.0.0"
+    "http-aws-es": "^6.0.0",
+    "uuid": "^8.3.2"
   }
 }

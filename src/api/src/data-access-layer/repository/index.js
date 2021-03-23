@@ -23,5 +23,9 @@ module.exports = class ElasticSearchRepository {
 
   search(options = {}) {
     return this.client.search(options);
+  };
+
+  create(options = {}) {
+    return this.client.create(options);
   }
 };
