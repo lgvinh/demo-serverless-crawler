@@ -7,7 +7,7 @@ const { ES_END_POINT, REGION } = process.env;
 /**
  * @typedef {import("elasticsearch").SearchParams} SearchParams
  */
-module.exports = class ElasticSearchRepository {
+class ElasticSearchRepository {
   constructor(
     config = {
       host: ES_END_POINT,
@@ -29,3 +29,10 @@ module.exports = class ElasticSearchRepository {
     return this.client.create(options);
   }
 };
+
+const elasticSearchClient = new ElasticSearchRepository();
+
+module.exports = {
+  ElasticSearchRepository,
+  elasticSearchClient
+}

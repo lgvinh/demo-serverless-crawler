@@ -2,27 +2,29 @@ class ProductDTO {
   /**
    * 
    */
-  constructor(data) {
-    this.products = data.map(({ _source }) => _source)
+  constructor(product) {
+    this.product = product;
   }
 
   /**
    * @typedef {{
+   *  "_index": string,
+   *  "_type": string,
+   *  "_id": string,
+   *  "_score": number
    *  name: string,
    *  description: string
    *  price: number
    * }} Product
    * 
-   * @returns {Product[]}
+   * @returns {Product}
    */
-  getRawProducts() {
-    return this.products;
+  getRawProduct() {
+    return this.product;
   }
 }
 
-const productDTO = (products) => {
-  return new ProductDTO(products);
-}
+const productDTO = (product) => new ProductDTO(product);
 
 module.exports = {
   ProductDTO,

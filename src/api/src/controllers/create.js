@@ -1,19 +1,17 @@
-const ElasticSearchRepository = require("../data-access-layer/repository");
+const { elasticSearchClient } = require("../data-access-layer/repository");
+const { INDICES } = require('../config/constant');
 const uuid = require('uuid');
-
-const client = new ElasticSearchRepository();
 
 module.exports.handler = async (event) => {
   try {
     const product = JSON.parse(event.body);
 
-    const result = await client.create({
+    const result = await elasticSearchClient.create({
       id: uuid.v4(),
-      index: 'products',
+      index: INDICES.PRODUCT,
       body: product
     });
 
-    console.trace("Create successfully: ", result);
     return {
       statusCode: 200,
       body: JSON.stringify(result),

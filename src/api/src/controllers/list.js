@@ -1,16 +1,18 @@
-const ElasticSearchRepository = require("../data-access-layer/repository");
+const { elasticSearchClient } = require("../data-access-layer/repository");
 const { productDTO } = require('../data-access-layer/dto/product');
-
-const client = new ElasticSearchRepository();
+const { elasticSearchDTO } = require('../data-access-layer/dto/elasticSearch');
+const { INDICES, DEFAULT_PAGE_SIZE, DEFAULT_PAGE_START } = require('../config/constant');
 
 module.exports.handler = async (event) => {
   try {
+    const { query, page, pageSize } = event.queryStringParameters ? event.queryStringParameters : {};
+
     const requestBody = {
-      from: 0,
-      size: 10
+      from: (page - 1) * pageSize || DEFAULT_PAGE_START,
+      size: +pageSize || DEFAULT_PAGE_SIZE
     };
 
-    if (event.queryStringParameters && event.queryStringParameters.query) {
+    if (query) {
       requestBody.query = {
         bool: {
           should: [
@@ -21,16 +23,14 @@ module.exports.handler = async (event) => {
       }
     }
 
-    const { hits: {
-        total: { value: total },
-        hits: data
-      }
-    } = await client.search({
-      index: "products",
+    const result = await elasticSearchClient.search({
+      index: INDICES.PRODUCT,
       body: requestBody
     });
 
-    const products = productDTO(data).getRawProducts();
+    const { data, total } = elasticSearchDTO(result).getRawData();
+
+    const products = data.map(product => productDTO(product).getRawProduct()) ;
 
     return {
       statusCode: 200,
@@ -39,8 +39,10 @@ module.exports.handler = async (event) => {
         total
       })
     };
-
   } catch (error) {
-    console.log('Error: ', error);
+    return {
+      statusCode: error.status,
+      body: JSON.stringify(error.body)
+    }
   }
 };
