@@ -1,11 +1,21 @@
+const uuid = require('uuid');
 const { elasticSearchClient } = require("../data-access-layer/repository");
 const { INDICES } = require('../config/constant');
-const uuid = require('uuid');
+const validation = require('../config/validation');
+const createProductSchema = require('../schemas/createProductSchema.json');
 
 module.exports.handler = async (event) => {
-  const product = JSON.parse(event.body);
+  // validation first
+  const validationError = validation.validate(createProductSchema, event.body);
+  if (validationError !== '') {
+    return {
+      statusCode: 400,
+      body: JSON.stringify({ message: validationError })
+    }
+  }
   const client = elasticSearchClient();
   try {
+    const product = JSON.parse(event.body);
     const result = await client.create({
       id: uuid.v4(),
       index: INDICES.PRODUCT,
