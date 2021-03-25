@@ -1,14 +1,30 @@
 const {
-  getProducts,
+  products: {
+    search
+  }
 } = require("common-crawler/src/application/crawlerManager");
 const { context } = require("../../utils");
 const { HTTP_STATUS_CODE } = require("../../utils/constant");
 
-module.exports.getProducts = async () => {
+module.exports.getProducts = async (event) => {
+  const ctx = context(event);
+  const { query } = ctx.request.queryParameters;
+
+  const requestBody = ctx.getPagination();
+
+  if (query) {
+    requestBody.query = {
+      bool: {
+        should: [
+          { match: { name: query } },
+          { match: { description: query } }
+        ]
+      }
+    }
+  }
   try {
-    const result = await getProducts();
-    console.log("result :>> ", result);
-    return context().response({
+    const result = await search(requestBody);
+    return ctx.response({
       statusCode: HTTP_STATUS_CODE.SUCCESS,
       body: result,
     });

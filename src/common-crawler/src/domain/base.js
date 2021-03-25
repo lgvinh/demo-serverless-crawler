@@ -2,9 +2,24 @@
  * Abstract class
  */
 class BaseDto {
-  constructor() {}
+  constructor({hits}) {
+    this.total = hits.total.value;
+    this.data = hits.hits.map(({_source}) => ({
+      ..._source
+    }));
+  }
 
-  getData() {}
+  /**
+   * 
+   */
+  getData() {
+    return {
+      total: this.total,
+      data: this.data
+    }
+  }
 }
 
-module.exports = BaseDto;
+const baseDto = (data) => new BaseDto(data);
+
+module.exports = { BaseDto, baseDto };

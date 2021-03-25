@@ -1,9 +1,13 @@
 const BaseRepository = require("./baseESRepository");
-const {} = require("../domain/product");
+const { productDTO } = require("../domain/product");
+const { INDICES } = require('../utils/constant');
 
 class ProductRepository extends BaseRepository {
   constructor() {
-    super({ index: "products" });
+    super({
+      index: INDICES.PRODUCTS,
+      Dto: productDTO
+    });
   }
 }
 

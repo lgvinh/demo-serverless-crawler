@@ -8,6 +8,12 @@ const HTTP_STATUS_CODE = {
   SERVER_ERROR: 500,
 };
 
+const DEFAULT_PAGE_START = 0;
+
+const DEFAULT_PAGE_SIZE = 10;
+
 module.exports = {
   HTTP_STATUS_CODE,
+  DEFAULT_PAGE_START,
+  DEFAULT_PAGE_SIZE
 };
