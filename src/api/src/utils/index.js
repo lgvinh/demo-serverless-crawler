@@ -1,7 +1,25 @@
+const { DEFAULT_PAGE_START, DEFAULT_PAGE_SIZE } = require("./constant");
+
 class Context {
   constructor(event = {}) {
     this.request = {
-      body: event.body,
+      body: event.body || {},
+      queryParameters: event.queryStringParameters || {}
+    };
+  }
+
+  getPagination() {
+    const { page, pageSize } = this.request.queryParameters;
+    let from = (page - 1) * pageSize;
+    const size = +pageSize || DEFAULT_PAGE_SIZE;
+
+    if (from < 0 || !from) {
+      from = DEFAULT_PAGE_START;
+    }
+
+    return {
+      from,
+      size
     };
   }
 

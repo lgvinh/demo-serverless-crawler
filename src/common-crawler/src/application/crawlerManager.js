@@ -1,9 +1,5 @@
-const { productRepository } = require("../repository/productRepository");
-
-const getProducts = (options = {}) => {
-  return productRepository().search(options);
-};
+const products = require('./products')
 
 module.exports = {
-  getProducts,
+  products
 };
