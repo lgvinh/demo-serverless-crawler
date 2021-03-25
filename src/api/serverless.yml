@@ -15,16 +15,9 @@ provider:
 
 functions:
   getProducts:
-    handler: ./src/controllers/list.handler
-    events:
-      - http:
-          path: /products/search
-          method: get
-          cors: true
-  createProduct:
-    handler: ./src/controllers/create.handler
+    handler: ./src/products/list-products/handler.getProducts
     events:
       - http:
           path: /products
-          method: post
+          method: get
           cors: true

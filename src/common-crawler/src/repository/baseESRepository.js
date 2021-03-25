@@ -4,8 +4,11 @@ const awsHttpClient = require("http-aws-es");
 
 const { ES_END_POINT, REGION } = process.env;
 
-class ElasticSearchRepository {
-  constructor(
+class BaseRepository {
+  // Private property
+  #index;
+
+  constructor({
     config = {
       host: ES_END_POINT,
       connectionClass: awsHttpClient,
@@ -13,13 +16,22 @@ class ElasticSearchRepository {
         region: REGION,
         credentials: new AWS.Credentials(),
       },
-    }
-  ) {
+    },
+    index,
+    // Dto,
+  }) {
     this.client = new Client(config);
+    this.#index = index;
+    // this.dto = new Dto();
   }
 
-  search(options = {}) {
-    return this.client.search(options);
+  async search(options = {}) {
+    const searchResult = await this.client.search({
+      index: this.#index,
+      ...options,
+    });
+    return searchResult;
+    // return this.dto.getData(searchResult);
   }
 
   create(options = {}) {
@@ -31,9 +43,4 @@ class ElasticSearchRepository {
   }
 }
 
-const elasticSearchClient = (config) => new ElasticSearchRepository(config);
-
-module.exports = {
-  ElasticSearchRepository,
-  elasticSearchClient,
-};
+module.exports = BaseRepository;

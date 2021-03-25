@@ -8,5 +8,10 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.870.0",
+    "elasticsearch": "^16.7.2",
+    "http-aws-es": "^6.0.0"
+  }
 }
