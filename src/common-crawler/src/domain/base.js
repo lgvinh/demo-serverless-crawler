@@ -1,22 +1,22 @@
-/**
- * Abstract class
- */
 class BaseDto {
-  constructor({hits}) {
-    this.total = hits.total.value;
-    this.data = hits.hits.map(({_source}) => ({
-      ..._source
-    }));
-  }
+  constructor() {}
 
   /**
-   * 
+   * Abstract method to return data
    */
-  getData() {
+  convertData() {
+    throw new Error("Base Dto convertData hasn't been implemented yet");
+  }
+
+  getData({ hits }) {
+    const total = hits.total.value;
+    const data = hits.hits.map(({ _source }) => ({
+      ..._source,
+    }));
     return {
-      total: this.total,
-      data: this.data
-    }
+      total,
+      data,
+    };
   }
 }
 

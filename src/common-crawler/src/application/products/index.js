@@ -1,6 +1,7 @@
 const { productRepository } = require("../../repository/productRepository");
-const { getESMethodFactory } = require('../../utils');
+const { productDTO } = require("../../domain/product");
+const { getESMethodFactory } = require("../../utils");
 
-const productMethods = getESMethodFactory(productRepository());
+const productMethods = getESMethodFactory(productRepository(), productDTO);
 
 module.exports = productMethods;

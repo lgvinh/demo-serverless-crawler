@@ -1,12 +1,16 @@
 const { BaseDto } = require("./base");
 
 class ProductDTO extends BaseDto {
-  constructor(rawProduct) {
-    super(rawProduct);
+  convertData({ name, description, price }) {
+    return {
+      name,
+      description,
+      price,
+    };
   }
 }
 
-const productDTO = (rawProduct) => new ProductDTO(rawProduct);
+const productDTO = (config) => new ProductDTO(config);
 
 module.exports = {
   ProductDTO,

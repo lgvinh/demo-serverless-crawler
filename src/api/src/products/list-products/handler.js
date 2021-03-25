@@ -1,7 +1,5 @@
 const {
-  products: {
-    search
-  }
+  products: { search },
 } = require("common-crawler/src/application/crawlerManager");
 const { context } = require("../../utils");
 const { HTTP_STATUS_CODE } = require("../../utils/constant");
@@ -15,12 +13,9 @@ module.exports.getProducts = async (event) => {
   if (query) {
     requestBody.query = {
       bool: {
-        should: [
-          { match: { name: query } },
-          { match: { description: query } }
-        ]
-      }
-    }
+        should: [{ match: { name: query } }, { match: { description: query } }],
+      },
+    };
   }
   try {
     const result = await search(requestBody);
@@ -30,5 +25,8 @@ module.exports.getProducts = async (event) => {
     });
   } catch (error) {
     console.log("error :>> ", error);
+    return ctx.response({
+      statusCode: HTTP_STATUS_CODE.SERVER_ERROR,
+    });
   }
 };

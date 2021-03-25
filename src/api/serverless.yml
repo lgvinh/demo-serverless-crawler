@@ -21,3 +21,10 @@ functions:
           path: /products
           method: get
           cors: true
+  createProducts:
+    handler: ./src/products/create-products/handler.createProducts
+    events:
+      - http:
+          path: /products
+          method: post
+          cors: true

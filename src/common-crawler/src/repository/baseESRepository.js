@@ -1,7 +1,6 @@
 const { Client } = require("elasticsearch");
 const AWS = require("aws-sdk");
 const awsHttpClient = require("http-aws-es");
-const { baseDto } = require('../domain/base');
 
 const { ES_END_POINT, REGION } = process.env;
 
@@ -31,18 +30,18 @@ class BaseRepository {
       index: this.#index,
       ...options,
     });
-    return this.dto(searchResult).getData();
+    return this.dto().getData(searchResult);
   }
 
   create(options = {}) {
     return this.client.create({
       index: this.#index,
-      ...options
+      ...options,
     });
   }
 
-  bulk(options = []) {
-    const bulkSet = options.flatMap((doc) => [
+  bulk(data = [], options = {}) {
+    const bulkSet = data.flatMap((doc) => [
       {
         index: {
           _index: this.#index,
@@ -51,7 +50,8 @@ class BaseRepository {
       doc,
     ]);
     return this.client.bulk({
-      body: bulkSet
+      body: bulkSet,
+      ...options,
     });
   }
 }

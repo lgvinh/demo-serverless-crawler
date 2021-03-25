@@ -3,8 +3,8 @@ const { DEFAULT_PAGE_START, DEFAULT_PAGE_SIZE } = require("./constant");
 class Context {
   constructor(event = {}) {
     this.request = {
-      body: event.body || {},
-      queryParameters: event.queryStringParameters || {}
+      body: JSON.parse(event.body || "{}"),
+      queryParameters: event.queryStringParameters || {},
     };
   }
 
@@ -19,14 +19,14 @@ class Context {
 
     return {
       from,
-      size
+      size,
     };
   }
 
   response({ statusCode, body }) {
     return {
       statusCode,
-      body: JSON.stringify(body),
+      body: JSON.stringify(body || {}),
     };
   }
 }
