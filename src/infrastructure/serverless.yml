@@ -21,7 +21,7 @@ resources:
         ElasticsearchClusterConfig:
           InstanceType: t2.small.elasticsearch
           InstanceCount: 1
-          DedicatedMasterEnabled: true
+          DedicatedMasterEnabled: false
           ZoneAwarenessEnabled: false
         EBSOptions:
           EBSEnabled: true
