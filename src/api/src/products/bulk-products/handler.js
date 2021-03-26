@@ -5,7 +5,7 @@ const {
 const { context } = require("../../utils");
 const { HTTP_STATUS_CODE } = require("../../utils/constant");
 
-module.exports.createProducts = async (event) => {
+module.exports.bulkProducts = async (event) => {
   const ctx = context(event);
   let products = ctx.request.body;
 
