@@ -1,0 +1,47 @@
+service: poc-crawler-infrastructure
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  region: ap-southeast-1
+
+custom:
+  esDomainName: product-search
+  region: ap-southeast-1
+  stage: dev
+
+resources:
+  Resources:
+    # Elastic Search Domain
+    productManagementESDomain:
+      Type: "AWS::Elasticsearch::Domain"
+      Properties:
+        DomainName: ${self:custom.esDomainName}
+        ElasticsearchVersion: 7.9
+        ElasticsearchClusterConfig:
+          InstanceType: t2.small.elasticsearch
+          InstanceCount: 1
+          DedicatedMasterEnabled: false
+          ZoneAwarenessEnabled: false
+        EBSOptions:
+          EBSEnabled: true
+          VolumeSize: 10
+          VolumeType: gp2
+        AccessPolicies:
+          Statement:
+            - Effect: Allow
+              Principal:
+                AWS: "*"
+              Action: "es:*"
+              Resource: "*"
+
+  Outputs:
+    # Elastic Search
+    ProductManagementElasticSearchDomainEndpoint:
+      Description: "Product Management ElasticSearch Domain Endpoint"
+      Value:
+        Fn::GetAtt: [productManagementESDomain, DomainEndpoint]
+    ProductManagementDataElasticSearchDomainARN:
+      Description: "Product Management ElasticSearch Domain ARN"
+      Value:
+        Fn::GetAtt: [productManagementESDomain, DomainArn]

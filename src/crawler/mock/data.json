@@ -1,0 +1,502 @@
+[
+  {
+    "name": "Grapefern",
+    "description": "Excision of Right Lower Arm, Open Approach, Diagnostic",
+    "price": 1000
+  },
+  {
+    "name": "Wavyleaf Noseburn",
+    "description": "Extirpation of Matter from Left Femoral Shaft, Percutaneous Endoscopic Approach",
+    "price": 2000
+  },
+  {
+    "name": "Mendocino Ceanothus",
+    "description": "Revision of Drainage Device in Cervicothoracic Vertebral Joint, Open Approach",
+    "price": 3000
+  },
+  {
+    "name": "Pandanus",
+    "description": "Drainage of Left External Jugular Vein, Open Approach",
+    "price": 4000
+  },
+  {
+    "name": "Musinea Ragwort",
+    "description": "Repair Lumbar Vertebra, Percutaneous Endoscopic Approach",
+    "price": 5000
+  },
+  {
+    "name": "Pergularia",
+    "description": "Drainage of Cranial Cavity, Open Approach",
+    "price": 6000
+  },
+  {
+    "name": "Gentian Noddingcaps",
+    "description": "Removal of Autologous Tissue Substitute from Right Upper Extremity, External Approach",
+    "price": 7000
+  },
+  {
+    "name": "Littleleaf Mountain Mahogany",
+    "description": "Replacement of Right Lacrimal Duct with Autologous Tissue Substitute, Via Natural or Artificial Opening",
+    "price": 8000
+  },
+  {
+    "name": "Creeping Sibbaldia",
+    "description": "Removal of Infusion Device from Face, Open Approach",
+    "price": 9000
+  },
+  {
+    "name": "Gray's Angelica",
+    "description": "Dilation of Left External Carotid Artery, Bifurcation, with Four or More Drug-eluting Intraluminal Devices, Percutaneous Approach",
+    "price": 10000
+  },
+  {
+    "name": "Splitbeard Bluestem",
+    "description": "High Dose Rate (HDR) Brachytherapy of Pelvic Region using Palladium 103 (Pd-103)",
+    "price": 11000
+  },
+  {
+    "name": "False Hollyfern",
+    "description": "Release Right Internal Mammary Lymphatic, Percutaneous Approach",
+    "price": 12000
+  },
+  {
+    "name": "Scrub Balm",
+    "description": "Reposition Transverse Colon, External Approach",
+    "price": 13000
+  },
+  {
+    "name": "Dominican Parmotrema Lichen",
+    "description": "Supplement Left Scapula with Synthetic Substitute, Open Approach",
+    "price": 14000
+  },
+  {
+    "name": "Red Floripontio",
+    "description": "Removal of Monitoring Device from Azygos Vein, Percutaneous Approach",
+    "price": 15000
+  },
+  {
+    "name": "Arctoparmelia Lichen",
+    "description": "Reattachment of Left Kidney, Open Approach",
+    "price": 16000
+  },
+  {
+    "name": "Hardgrass",
+    "description": "Release Right Femoral Shaft, Percutaneous Approach",
+    "price": 17000
+  },
+  {
+    "name": "Spreading Amaranth",
+    "description": "Removal of Drainage Device from Mediastinum, External Approach",
+    "price": 18000
+  },
+  {
+    "name": "Chinese Ephedra",
+    "description": "Drainage of Cervix, Open Approach",
+    "price": 19000
+  },
+  {
+    "name": "Southern Chinese Pine",
+    "description": "Revision of Synthetic Substitute in Left Eye, External Approach",
+    "price": 20000
+  },
+  {
+    "name": "New Mexican Wart Lichen",
+    "description": "Low Dose Rate (LDR) Brachytherapy of Axillary Lymphatics using Iodine 125 (I-125)",
+    "price": 21000
+  },
+  {
+    "name": "Diffuse Dot Lichen",
+    "description": "Insertion of Intraluminal Device into Right Vertebral Artery, Open Approach",
+    "price": 22000
+  },
+  {
+    "name": "Squirreltail Fescue",
+    "description": "Revision of Nonautologous Tissue Substitute in Testis, External Approach",
+    "price": 23000
+  },
+  {
+    "name": "Mount Eddy Jacob's-ladder",
+    "description": "Dilation of Right Radial Artery with Three Drug-eluting Intraluminal Devices, Percutaneous Endoscopic Approach",
+    "price": 24000
+  },
+  {
+    "name": "Rollins' Clover",
+    "description": "Insertion of Ring External Fixation Device into Right Tibia, Percutaneous Endoscopic Approach",
+    "price": 25000
+  },
+  {
+    "name": "Snow Lichen",
+    "description": "Insertion of External Fixation Device into Right Metacarpal, Percutaneous Approach",
+    "price": 26000
+  },
+  {
+    "name": "Bonneville Pea",
+    "description": "Removal of Synthetic Substitute from Kidney, Via Natural or Artificial Opening Endoscopic",
+    "price": 27000
+  },
+  {
+    "name": "Great Plains Bladderpod",
+    "description": "Fusion of Left Wrist Joint, Open Approach",
+    "price": 28000
+  },
+  {
+    "name": "Wild Cinnamon",
+    "description": "Extirpation of Matter from Cervix, Open Approach",
+    "price": 29000
+  },
+  {
+    "name": "Threeawn",
+    "description": "Extirpation of Matter from Brain, Percutaneous Approach",
+    "price": 30000
+  },
+  {
+    "name": "Milktree",
+    "description": "Extirpation of Matter from Left Kidney Pelvis, Percutaneous Endoscopic Approach",
+    "price": 31000
+  },
+  {
+    "name": "Sicklekeel Lupine",
+    "description": "Reattachment of Right Abdomen Bursa and Ligament, Percutaneous Endoscopic Approach",
+    "price": 32000
+  },
+  {
+    "name": "Moapa Bladderpod",
+    "description": "Replacement of Right Colic Artery with Nonautologous Tissue Substitute, Percutaneous Endoscopic Approach",
+    "price": 33000
+  },
+  {
+    "name": "Dwarf Mountain Ragwort",
+    "description": "Dilation of Left Brachial Artery, Percutaneous Endoscopic Approach",
+    "price": 34000
+  },
+  {
+    "name": "Larkspur",
+    "description": "Repair Right Femoral Vein, Percutaneous Endoscopic Approach",
+    "price": 35000
+  },
+  {
+    "name": "Yellow-top Mallee-ash",
+    "description": "Alteration of Right Upper Leg with Nonautologous Tissue Substitute, Percutaneous Approach",
+    "price": 36000
+  },
+  {
+    "name": "Douglas' Meadowfoam",
+    "description": "Drainage of Left Brachial Artery, Percutaneous Approach",
+    "price": 37000
+  },
+  {
+    "name": "Gravelbar Cryptantha",
+    "description": "Restriction of Left Renal Vein with Extraluminal Device, Percutaneous Approach",
+    "price": 38000
+  },
+  {
+    "name": "American Century Plant",
+    "description": "Beam Radiation of Chest using Neutrons",
+    "price": 39000
+  },
+  {
+    "name": "Longleaf Brickellbush",
+    "description": "Dilation of Right Internal Carotid Artery, Bifurcation, with Three Drug-eluting Intraluminal Devices, Open Approach",
+    "price": 40000
+  },
+  {
+    "name": "Streambank Mock Orange",
+    "description": "Introduction of Vasopressor into Peripheral Artery, Open Approach",
+    "price": 41000
+  },
+  {
+    "name": "Small Treefern",
+    "description": "Removal of Autologous Tissue Substitute from Right Toe Phalangeal Joint, Percutaneous Endoscopic Approach",
+    "price": 42000
+  },
+  {
+    "name": "Baltic Saltbush",
+    "description": "Insertion of Single Channel Cochlear Prosthesis into Left Inner Ear, Percutaneous Endoscopic Approach",
+    "price": 43000
+  },
+  {
+    "name": "White Insideout Flower",
+    "description": "Supplement Right Fallopian Tube with Autologous Tissue Substitute, Open Approach",
+    "price": 44000
+  },
+  {
+    "name": "Maranta",
+    "description": "Supplement Tongue, Palate, Pharynx Muscle with Autologous Tissue Substitute, Percutaneous Endoscopic Approach",
+    "price": 45000
+  },
+  {
+    "name": "Munz's Hedgehog Cactus",
+    "description": "Repair Left Internal Iliac Artery, Percutaneous Endoscopic Approach",
+    "price": 46000
+  },
+  {
+    "name": "Aztec Milkvetch",
+    "description": "Restriction of Left Large Intestine with Intraluminal Device, Percutaneous Endoscopic Approach",
+    "price": 47000
+  },
+  {
+    "name": "Tushar Plateau Indian Paintbrush",
+    "description": "Excision of Left Vocal Cord, Percutaneous Approach",
+    "price": 48000
+  },
+  {
+    "name": "Nettleleaf Giant Hyssop",
+    "description": "Transfer Head and Neck Bursa and Ligament, Open Approach",
+    "price": 49000
+  },
+  {
+    "name": "Splitleaf Cyanea",
+    "description": "Drainage of Left Temporomandibular Joint, Open Approach, Diagnostic",
+    "price": 50000
+  },
+  {
+    "name": "Greenland Alkaligrass",
+    "description": "Reposition Right Ulna with Ring External Fixation Device, Percutaneous Endoscopic Approach",
+    "price": 51000
+  },
+  {
+    "name": "Indian Breadroot",
+    "description": "Skin and Breast, Extraction",
+    "price": 52000
+  },
+  {
+    "name": "Spreading Amaranth",
+    "description": "Release Stomach, Pylorus, Percutaneous Endoscopic Approach",
+    "price": 53000
+  },
+  {
+    "name": "Sticky Purple Geranium",
+    "description": "Bypass Middle Esophagus to Jejunum, Open Approach",
+    "price": 54000
+  },
+  {
+    "name": "Eastern Poison Ivy",
+    "description": "Supplement Lumbar Vertebra with Synthetic Substitute, Percutaneous Endoscopic Approach",
+    "price": 55000
+  },
+  {
+    "name": "Columbian Lewisia",
+    "description": "Repair Left Neck Muscle, Percutaneous Approach",
+    "price": 56000
+  },
+  {
+    "name": "Mountain Ironwort",
+    "description": "Removal of Intraluminal Device from Lymphatic, Open Approach",
+    "price": 57000
+  },
+  {
+    "name": "Cushion Townsend Daisy",
+    "description": "Low Dose Rate (LDR) Brachytherapy of Nose using Other Isotope",
+    "price": 58000
+  },
+  {
+    "name": "Spineflower",
+    "description": "Introduction of Other Thrombolytic into Heart, Open Approach",
+    "price": 59000
+  },
+  {
+    "name": "Wrinkleleaf Goldenrod",
+    "description": "Fusion of Lumbar Vertebral Joint with Nonautologous Tissue Substitute, Posterior Approach, Posterior Column, Percutaneous Approach",
+    "price": 60000
+  },
+  {
+    "name": "Pineland Buckwheat",
+    "description": "Plain Radiography of Left Internal Carotid Artery using High Osmolar Contrast",
+    "price": 61000
+  },
+  {
+    "name": "Starbur",
+    "description": "Computerized Tomography (CT Scan) of Bilateral Temporomandibular Joints using Other Contrast",
+    "price": 62000
+  },
+  {
+    "name": "Blunt-leaf Cassia",
+    "description": "Revision of Spacer in Right Toe Phalangeal Joint, External Approach",
+    "price": 63000
+  },
+  {
+    "name": "Flatglobe Dodder",
+    "description": "Drainage of Right Hepatic Duct, Percutaneous Endoscopic Approach, Diagnostic",
+    "price": 64000
+  },
+  {
+    "name": "Sarcogyne Lichen",
+    "description": "Ultrasonography of Other Intra-Abdominal Arteries",
+    "price": 65000
+  },
+  {
+    "name": "Redspot Clarkia",
+    "description": "Extirpation of Matter from Epiglottis, Percutaneous Endoscopic Approach",
+    "price": 66000
+  },
+  {
+    "name": "Bulbous Adderstongue",
+    "description": "Drainage of Right Retina, Percutaneous Approach, Diagnostic",
+    "price": 67000
+  },
+  {
+    "name": "Annual Marsh Elder",
+    "description": "Release Right Testis, Percutaneous Endoscopic Approach",
+    "price": 68000
+  },
+  {
+    "name": "Cup Lichen",
+    "description": "Wound Management Treatment of Musculoskeletal System - Head and Neck using Prosthesis",
+    "price": 69000
+  },
+  {
+    "name": "Fairy Beaksedge",
+    "description": "Supplement Right Thumb Phalanx with Nonautologous Tissue Substitute, Percutaneous Approach",
+    "price": 70000
+  },
+  {
+    "name": "Amblyopappus",
+    "description": "Ultrasonography of Right Ovary",
+    "price": 71000
+  },
+  {
+    "name": "Eastern Redcedar",
+    "description": "Reposition Right Femoral Shaft with Internal Fixation Device, Open Approach",
+    "price": 72000
+  },
+  {
+    "name": "Scarlet Four O'clock",
+    "description": "Extirpation of Matter from Right Lower Leg Muscle, Percutaneous Endoscopic Approach",
+    "price": 73000
+  },
+  {
+    "name": "Green Wattle",
+    "description": "Repair Right Hip Tendon, Percutaneous Endoscopic Approach",
+    "price": 74000
+  },
+  {
+    "name": "Featherweed",
+    "description": "Resection of Thoracic Duct, Percutaneous Endoscopic Approach",
+    "price": 75000
+  },
+  {
+    "name": "Woodborder Dewberry",
+    "description": "High Dose Rate (HDR) Brachytherapy of Salivary Glands using Iridium 192 (Ir-192)",
+    "price": 76000
+  },
+  {
+    "name": "True Babystars",
+    "description": "Excision of Coronary Vein, Percutaneous Endoscopic Approach",
+    "price": 77000
+  },
+  {
+    "name": "Hyssopleaf Thoroughwort",
+    "description": "Supplement Right Metatarsal-Phalangeal Joint with Autologous Tissue Substitute, Open Approach",
+    "price": 78000
+  },
+  {
+    "name": "Larch Dwarf Mistletoe",
+    "description": "Drainage of Lingula Bronchus, Percutaneous Approach, Diagnostic",
+    "price": 79000
+  },
+  {
+    "name": "Blue Ridge Bittercress",
+    "description": "Revision of Synthetic Substitute in Omentum, Percutaneous Approach",
+    "price": 80000
+  },
+  {
+    "name": "Grainfield Spurge",
+    "description": "Repair Head and Neck Sympathetic Nerve, Open Approach",
+    "price": 81000
+  },
+  {
+    "name": "Lesser Saltmarsh Sedge",
+    "description": "Drainage of Left Large Intestine, Percutaneous Approach",
+    "price": 82000
+  },
+  {
+    "name": "Texas Crested Coralroot",
+    "description": "Ultrasonography of Right Elbow",
+    "price": 83000
+  },
+  {
+    "name": "Pink Funnel Lily",
+    "description": "Removal of External Fixation Device from Left Toe Phalangeal Joint, Percutaneous Approach",
+    "price": 84000
+  },
+  {
+    "name": "Dalibarda",
+    "description": "Alteration of Left Upper Extremity with Synthetic Substitute, Open Approach",
+    "price": 85000
+  },
+  {
+    "name": "Maiden Blue Eyed Mary",
+    "description": "Computerized Tomography (CT Scan) of Right Hand",
+    "price": 86000
+  },
+  {
+    "name": "Longleaf Indian Paintbrush",
+    "description": "Removal of Radioactive Element from Pericardial Cavity, Percutaneous Approach",
+    "price": 87000
+  },
+  {
+    "name": "Siberian Sea Thrift",
+    "description": "Drainage of Sternum, Percutaneous Endoscopic Approach",
+    "price": 88000
+  },
+  {
+    "name": "Pulasan",
+    "description": "Supplement Left Common Carotid Artery with Autologous Tissue Substitute, Percutaneous Approach",
+    "price": 89000
+  },
+  {
+    "name": "Babington's Roccella Lichen",
+    "description": "Occlusion of Right Hepatic Duct with Extraluminal Device, Open Approach",
+    "price": 90000
+  },
+  {
+    "name": "Largefruit Bladderpod",
+    "description": "Plaque Radiation of Parathyroid Glands",
+    "price": 91000
+  },
+  {
+    "name": "Common Teatree",
+    "description": "Repair Right Eustachian Tube, Percutaneous Approach",
+    "price": 92000
+  },
+  {
+    "name": "Dwarf Plantain",
+    "description": "Restriction of Middle Esophagus with Extraluminal Device, Open Approach",
+    "price": 93000
+  },
+  {
+    "name": "New Mexico Muhly",
+    "description": "Reposition Uvula, External Approach",
+    "price": 94000
+  },
+  {
+    "name": "Mountain-ash",
+    "description": "Repair Left Knee Region, Percutaneous Endoscopic Approach",
+    "price": 95000
+  },
+  {
+    "name": "Sand Sedge",
+    "description": "Revision of Synthetic Substitute in Hepatobiliary Duct, Percutaneous Endoscopic Approach",
+    "price": 96000
+  },
+  {
+    "name": "Frosted Lichen",
+    "description": "Destruction of Left Trunk Bursa and Ligament, Percutaneous Endoscopic Approach",
+    "price": 97000
+  },
+  {
+    "name": "Tamaulipas Amaranth",
+    "description": "Insertion of Pacemaker Lead into Left Atrium, Percutaneous Endoscopic Approach",
+    "price": 98000
+  },
+  {
+    "name": "Rattan's Beardtongue",
+    "description": "Supplement Middle Colic Artery with Nonautologous Tissue Substitute, Percutaneous Endoscopic Approach",
+    "price": 99000
+  },
+  {
+    "name": "Hypnum Moss",
+    "description": "Drainage of Left Kidney Pelvis, Via Natural or Artificial Opening, Diagnostic",
+    "price": 100000
+  }
+]
